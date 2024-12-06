@@ -1,0 +1,101 @@
+<h2>Child works! :</h2>
+<div class="container">
+    <h3>ngOnChanges</h3>
+    <ul>
+        <li>ngOnChanges will be called when ever the input() property is changed.</li>
+        <li>This ngOnChanges method excepts a parameter of changes of type simplechanges.</li>
+        <li>This changes parameter consists of object with currentValue,firstChange and perviousValue</li>
+    </ul>
+    <p> {{titleFromParent}} </p>
+    <p>{{data}} - {{data2 ==true?'Odd':'Even'}}</p>
+    <hr>
+</div>
+<div class="container">
+    <h3>ngOnInit</h3>
+    <ul>
+        <li>By default this method will be shown in the component class</li>
+        <li>This method will be called after initialzing the input properties before rendering on html page/browser</li>
+        <li>This method will be called once in the component life cycle</li>
+        <hr>
+        <li>Constructor also will be called only once in component life cycle</li>
+        <li>first Constructor will be called </li>
+        <li>second ngOnChanges will be called</li>
+        <li>third ngOnInit will be called</li>
+        <li>Constructor will be called whenever the instance is created of the component</li>
+        <hr>
+        <h5>Constructor</h5>
+        <li>Inject any service</li>
+        <li>initialize the values to default fields</li>
+        <li>Do not perform any logic here</li>
+        <hr>
+        <h5>ngOnInit</h5>
+        <li>Make call to API for page load</li>
+        <li>Any logic that you need to perform at very first as the component gets instantiated</li>
+    </ul>
+    <hr>
+</div>
+<div class="container">
+    <h2>ngDoCheck</h2>
+    <p>
+        Author data: <br>
+        id : {{authors?.id}} <br>
+        name : {{authors?.name}}
+    </p>
+    <hr>
+    <ul>
+        <li>If we are making changes to the existing refernce of an object ,that wont be shown/detect in ngOnChanges method</li>
+        <li>To handle this type of secanrio we need to use ngDoCheck</li>
+        <li>changes will be checked manually</li>
+        <li>don't use ngOnChanges and ngDoCheck both at once</li>
+    </ul>
+    <hr>
+</div>
+<div class="container">
+    <h2>Content Projection</h2>
+    <P>This a process of passing a dynamic data to a child component.</P>
+    <ul>
+        <li>use ng-content</li>
+        <li><ng-content></ng-content></li>
+        <li>using ng-content we can send component also </li>
+    </ul>
+    <hr>
+</div>
+<div class="container">
+    <h2>ngAfterContentInit</h2>
+    <ul>
+        <li>This methos will be called only once </li>
+    </ul>
+    <hr>
+</div>
+<div class="container">
+    <h2>ngAfterContentChecked</h2>
+    <ul>
+        <li>This will be called whenever there is an change in content</li>
+    </ul>
+    <hr>
+</div>
+<div class="container">
+    <h2>ngAfterViewInit</h2>
+    <ul>
+        <li>This will be called once the view is initialize</li>
+        <li>Here is view is nothing but .html file</li>
+        <li>After view initialization ,we can access any element in the html file</li>
+    </ul>
+    <hr>
+</div>
+<div class="container">
+    <h2>ngAfterViewChecked</h2>
+    <ul>
+        <li>This will be called whenever there is an change in view</li>
+    </ul>
+    <hr>
+</div>
+<div class="container">
+    <h2>ngOnDestory</h2>
+    <ul>
+        <li>This will be called whenever we nativegate to other component</li>
+        <li>we can stop setinterval and unsubscribe the observables</li>
+        <li>if there is any performance issue,this is place we need to check first</li>
+    </ul>
+    <hr>
+</div>

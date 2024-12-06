@@ -1,0 +1,6 @@
+<h2>Parent works!</h2>
+<hr>
+<button (click)="counter()">Counter</button>
+<app-child [titleFromParent]="title" [data]="count" [data2]="status" [authors]="obj">
+    <h1>Dynamic data from parent</h1>
+</app-child>
